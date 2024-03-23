@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    volumes:
+      - /Users/pukeron89/PycharmProjects/Binance_work/postgres_data:/var/lib/postgres/data
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5657:5432"
+
+volumes:
+  postgres_data:
